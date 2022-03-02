@@ -7,7 +7,7 @@ terraform {
 }
 
 data "dcnm_inventory" "fabric-1" {
-  for_each    = var.fabric_switches
+  for_each    = toset(var.fabric_switches)
   fabric_name = var.fabric_name
   switch_name = each.value
 }
