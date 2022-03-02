@@ -20,7 +20,7 @@ provider "dcnm" {
 
 
 module "fabric_switches" {
-  source          = "git...."
+  source          = "github.com/rjohnston6/ndfc_fabric_example"
   for_each        = var.inventory
   fabric_name     = each.value.fabric_name
   fabric_switches = each.value.fabric_switches
